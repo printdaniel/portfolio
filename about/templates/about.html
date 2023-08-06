@@ -1,8 +1,21 @@
 {% extends 'home/base.html' %}
 
 
+{% block extra_head %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+{% endblock %}
+
+
 {% block content %}
 
-<h1>About</1>
+<h1>About</h>
+
+    <!-- La fuente "Press Start 2P" se aplicará automáticamente aquí -->
+    <p>This is the about page content.</p>
+
+    <p style="font-family: 'Press Start 2P', cursive;">This is the about page content.</p>
+
 
 {% endblock %}
