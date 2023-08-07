@@ -7,3 +7,4 @@ urlpatterns = [
     path("", include('projects.urls')),
     path("", include('contact.urls')),
 ]
+
