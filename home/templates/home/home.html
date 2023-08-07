@@ -6,7 +6,7 @@
     <!-- Título  y tecnologías -->
 <section class="py-5 text-center">
     <div class="container">
-        <h1 class="display-4">Python Backend Dev</h1>
+        <h1 class="display-3 font-weight-bold">Python Backend Dev</h1>
         <p class="lead">Welcome to my portfolio showcasing Python backend development projects.</p>
         
         <!-- Iconos de tecnologías -->
@@ -20,8 +20,27 @@
             <!-- Agrega más iconos aquí -->
         </div>
         
-        <a href="#projects" class="btn btn-django btn-lg mt-4">View Projects</a>
+        </section>
+
+<section class="py-5 text-center bg-light">
+    <div class="container">
+        <div class="border p-4 rounded">
+            <h1>Perfil Profesional</h1>
+
+            <p class="lead">
+Soy un programador backend y analista de datos con experiencia en Python, SQL y Django REST
+Framework, apasionado por la tecnología y el trabajo en sistemasoperativos
+operativos basados en Linux.
+           </p>
+
+           <p> Mi enfoque está en entregar soluciones efectivas y de alta calidad para mis
+clientes, con habilidades en gestión de bases de datos, diseño de arquitecturas y resolución de
+problemas complejos.</p>
+
+            <a href="{% url 'projects' %}" class="btn btn-django btn-lg mt-4 text-white">View Projects</a>
+        </div>
     </div>
 </section>
+
 
 {% endblock %}
