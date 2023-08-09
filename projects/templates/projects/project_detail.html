@@ -1,0 +1,27 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="container">
+    <div class="text-center mb-5 neon-text">
+      <h1 class="display-4">Detalles del Proyecto</h1>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2>{{ project.title }}</h2>
+        <p>{{ project.description }}</p>
+        <div class="project-media">
+          {% for media in media %}
+            <p>Media Type: {{ media.media_type }}</p>
+            {% if media.media_type == 'image' %}
+              <img src="{{ media.image.url }}" alt="{{ project.title }}">
+            {% elif media.media_type == 'video' %}
+              <iframe width="560" height="315" src="{{ media.video_url }}" frameborder="0" allowfullscreen></iframe>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

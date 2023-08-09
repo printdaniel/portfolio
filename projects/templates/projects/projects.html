@@ -22,7 +22,7 @@
             <div class="card-body">
               <h5 class="card-title">{{ project.title }}</h5>
               <p class="card-text">{{ project.description }}</p>
-              <a href="#" class="btn custom-button">Ver proyecto</a>
+              <a href="{% url 'project-details' project.id %}" class="btn custom-button">Ver proyecto</a>
             </div>
           </div>
         </div>

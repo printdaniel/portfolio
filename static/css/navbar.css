@@ -1,0 +1,32 @@
+ /* Estilos personalizados */
+        .navbar-dark .navbar-nav .nav-link {
+            color: #fff;
+        }
+        .navbar-dark .navbar-toggler-icon {
+            background-color: #fff;
+        }
+        .bg-django {
+            background-color: #0C4B33;
+        }
+        .text-django {
+            color: #0C4B33;
+        }
+        .btn-django {
+            background-color: #0C4B33;
+            border-color: #0C4B33;
+        }
+        .btn-django:hover {
+            background-color: #06381E;
+            border-color: #06381E;
+        }
+        .navbar-nav .nav-link.active-section {
+        background-color: #007bff;
+        color: #fff;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link.active-section:hover {
+        background-color: #0056b3;
+        color: #fff;
+}
+
