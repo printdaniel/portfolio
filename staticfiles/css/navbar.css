@@ -1,4 +1,23 @@
-.navbar-nav .nav-item.active .nav-link {
-    background-color: #333; /* Cambia el color de fondo al resaltar */
-    color: #fff; /* Cambia el color del texto al resaltar */
+/* Estilos para la barra de navegación */
+.bg-django {
+    background-color: #0e639c; /* Color de fondo */
 }
+
+.text-django {
+    color: #0e639c; /* Color del texto */
+}
+
+.navbar-toggler-icon {
+    background-color: #0e639c; /* Color del icono del botón de navegación en el modo colapsado */
+}
+
+.navbar-nav .nav-link {
+    color: #fff; /* Color del enlace */
+    transition: color 0.3s ease-in-out; /* Transición de color suave */
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #ffc107; /* Color del enlace al pasar el cursor o cuando está activo */
+}
+

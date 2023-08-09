@@ -1,28 +1,22 @@
-{% load static %}
-
-{% block extra_head %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/navbar.css' %}">
-{% endblock %}
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-django">
     <div class="container">
-        <a class="navbar-brand text-django" href="#">Python Backend Dev</a>
+        <a class="navbar-brand" href="#">Daniel Suárez</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item {% if request.resolver_match.url_name == 'home' %}active{% endif %}">
-                <a class="nav-link" href="{% url 'home' %}">Home</a>
-            </li>
-            <li class="nav-item {% if request.resolver_match.url_name == 'projects' %}active{% endif %}">
-                <a class="nav-link" href="{% url 'projects' %}#">Projects</a>
-            </li>
-            <li class="nav-item {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">
-                <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-            </li>
-        </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white {% if request.resolver_match.url_name == 'home' %}active-section{% endif %}" href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white {% if request.resolver_match.url_name == 'projects' %}active-section{% endif %}" href="{% url 'projects' %}">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white {% if request.resolver_match.url_name == 'contact' %}active-section{% endif %}" href="{% url 'contact' %}">Contact</a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>

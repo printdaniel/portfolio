@@ -1,0 +1,26 @@
+* Estilos para el fondo y el texto */
+.grubvox-bg {
+  background-color: #292e37;
+}
+
+.grubvox-text {
+  color: #f1f1f1;
+}
+
+/* Estilos para las tarjetas */
+.grubvox-card {
+  background-color: #2f343d;
+  border-color: #333;
+}
+
+/* Estilos para los botones */
+.grubvox-button {
+  background-color: #64b7d1;
+  border-color: #64b7d1;
+  color: #fff;
+}
+
+.grubvox-button:hover {
+  background-color: #438eaa;
+  border-color: #438eaa;
+}

@@ -1,0 +1,30 @@
+.custom-card {
+  background-color: #0C4B33 ; /* Fondo blanco */
+  border: none; /* Sin borde */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+  border-radius: 10px; /* Borde redondeado */
+}
+
+.custom-card .card-body {
+  padding: 20px;
+}
+
+.custom-card h5.card-title {
+  color: #ffffff; /* Texto en tono de Django */
+}
+
+.custom-card p.card-text {
+  color: #93D7B7; /* Texto oscuro */
+}
+
+.custom-button {
+  background-color: #007bff; /* Botón en tono de Django */
+  border-color: #007bff; /* Borde en tono de Django */
+  color: #ffffff; /* Texto blanco */
+}
+
+.custom-button:hover {
+  background-color: #0056b3; /* Botón oscuro al pasar el cursor */
+  border-color: #0056b3; /* Borde oscuro al pasar el cursor */
+}
+
