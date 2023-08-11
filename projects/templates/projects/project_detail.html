@@ -6,8 +6,38 @@
 <!-- Si el modelo es es de imagen -->
 {% if media.0.media_type == 'image' %}
 
-<div class="container">
-  <div class="row justify-content-center">
+<div class="bg-success container">
+<div class="card justify-content-center" style="width: 18rem;">
+  <!-- Tarjeta de información de contenido del proyecto -->
+  <div class="card-header text-success">
+    {{ project.title }}
+  </div>
+  {% if project.github_link %}
+    <div>
+      <span>
+        <img src="{% static 'svg/github.svg' %}" alt="GitHub Icon" width="30" height="30">
+      </span>
+      <span>
+        <a href="{{ project.github_link }}" target="_blank">Ver en GitHub</a>
+      </span>
+    </div>
+  {% endif %}
+
+  <!-- Si el proyecto esta online -->
+  {% if project.project_online %}
+    <div>
+      <span>
+        <img src="{% static 'svg/web.svg' %}" alt="GitHub Icon" width="30" height="30">
+      </span>
+      <span>
+        <a href="{{ project.project_online }}" target="_blank">Ver el proyecto desplegado</a>
+      </span>
+    </div>
+  </div>
+
+  {% endif %}
+
+  <div class="bg-successrow justify-content-center">
     <div class="col-lg-8">
       <div class="card border-secondary">
         <div class="card-body">
@@ -39,15 +69,18 @@
 <!-- Si el modelo contiene video -->
 {% if media.0.media_type == 'video' %}
 
-<div class="card border-rounded shadow">
-  <div class="card-body">
-    <div class="card bg-primary text-white">
-      <div class="card-header">
-        <h2 class="card-title">{{ project.title }}</h2>
-      </div>
-      <div class="card-body">
-        <div class="embed-responsive embed-responsive-16by9">
-          {{ project.youtube_embed|safe }}
+
+<div class="bg-success d-flex justify-content-center align-items-center vh-100">
+  <div class="card border-rounded shadow">
+    <div class="card-body">
+      <div class="card bg-primary text-white">
+        <div class="card-header">
+          <h2 class="card-title">{{ project.title }}</h2>
+        </div>
+        <div class="card-body">
+          <div class="embed-responsive embed-responsive-16by9">
+            {{ project.youtube_embed|safe }}
+          </div>
         </div>
       </div>
     </div>
@@ -57,3 +90,8 @@
 {% endif %}
 
 {% endblock %}
+
+
+   <!-- github_link = models.URLField(blank=True, null=True) -->
+   <!--  project_online = models.URLField(blank=True, null=True) -->
+   <!--  youtube_embed = models.TextField(blank=True, null=True) -->
