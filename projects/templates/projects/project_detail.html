@@ -3,7 +3,7 @@
 
 {% block content %}
 
-
+<!-- Si el modelo es es de imagen -->
 {% if media.0.media_type == 'image' %}
 
 <div class="container">
@@ -36,18 +36,23 @@
 
 {% endif %}
 
+<!-- Si el modelo contiene video -->
 {% if media.0.media_type == 'video' %}
 
-    <h1>{{ project.title }}</h1>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EY3M0K5zb9s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-    {% for media_item in media %}
-
-    <a href="{{ media_item.video_url }}" class="btn btn-primary">Watch Video</a>
-
-    {% endfor %}
-
+<div class="card border-rounded shadow">
+  <div class="card-body">
+    <div class="card bg-primary text-white">
+      <div class="card-header">
+        <h2 class="card-title">{{ project.title }}</h2>
+      </div>
+      <div class="card-body">
+        <div class="embed-responsive embed-responsive-16by9">
+          {{ project.youtube_embed|safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endif %}
 

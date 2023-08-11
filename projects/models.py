@@ -8,6 +8,10 @@ def validate_media_count(media):
 class Project(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
+    github_link = models.URLField(blank=True, null=True)
+    project_online = models.URLField(blank=True, null=True)
+    youtube_embed = models.TextField(blank=True, null=True)
+
     
     MEDIA_CHOICES = [('image', 'Image'), ('video', 'Video')]
     media_type = models.CharField(max_length=20, choices=MEDIA_CHOICES)
@@ -20,6 +24,7 @@ class ProjectMedia(models.Model):
     media_type = models.CharField(max_length=20, choices=Project.MEDIA_CHOICES)
     image = models.ImageField(upload_to='project_images/', blank=True, null=True)
     video_url = models.URLField(blank=True, null=True)
+    
 
     def __str__(self):
         return f"Media for {self.project.title}"
