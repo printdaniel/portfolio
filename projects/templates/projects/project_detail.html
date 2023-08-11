@@ -37,10 +37,18 @@
 {% endif %}
 
 {% if media.0.media_type == 'video' %}
-    <div class="embed-responsive embed-responsive-16by9">
-      <iframe class="embed-responsive-item" src="{{ media.0.video_url }}" allowfullscreen></iframe>
-    </div>
-{% endif %}
 
+    <h1>{{ project.title }}</h1>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EY3M0K5zb9s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    {% for media_item in media %}
+
+    <a href="{{ media_item.video_url }}" class="btn btn-primary">Watch Video</a>
+
+    {% endfor %}
+
+
+{% endif %}
 
 {% endblock %}
